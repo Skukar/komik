@@ -8,12 +8,12 @@ import Loading from '@/components/common/Loading';
 import ScrollTopButton from '@/components/common/ScrollTopButton';
 
 const DetailKomik = () => {
-  const { komikId } = useParams();
+  const { manhwaId } = useParams();
   const {
     data: komikDetail,
     isLoading,
     error,
-  } = useFetch(() => getDetailKomik(komikId));
+  } = useFetch(() => getDetailKomik(manhwaId));
 
   if (isLoading) return <Loading />;
   if (error)
@@ -33,7 +33,7 @@ const DetailKomik = () => {
   return (
     <div className="p-4 bg-gray-950 min-h-screen text-white">
       <DetailSection komikDetail={komikDetail} />
-      <ChapterSection komikDetail={komikDetail} nameKomik={komikId} />
+      <ChapterSection komikDetail={komikDetail} nameKomik={manhwaId} />
 
       {/* Top Button */}
       <ScrollTopButton />
