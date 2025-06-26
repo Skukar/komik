@@ -16,7 +16,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/detail/:komikId" element={<DetailKomik />} />
+        <Route path="/detail/:manhwaId" element={<DetailKomik />} />
         <Route path="/chapter/:chapterSlug" element={<ChaptersPage />} />
         <Route
           path="/genre/:genreId/page/:pageNumber"
