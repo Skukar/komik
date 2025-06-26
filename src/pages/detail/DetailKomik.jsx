@@ -8,7 +8,7 @@ import Loading from '@/components/common/Loading';
 import ScrollTopButton from '@/components/common/ScrollTopButton';
 
 const DetailKomik = () => {
-  const { manhwaId } = useParams();
+  const { komikDetail } = useParams();
   const {
     data: komikDetail,
     isLoading,
